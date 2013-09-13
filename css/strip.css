@@ -307,10 +307,10 @@ h4 {
 	border-radius: 8px;
    
 	color:#fff;	
-	text-shadow: #3799ca 0 -1px 0;
+	text-shadow: #6b8315 0 -1px 0;
 	box-shadow: 0 1px 1px rgba(0,0,0,0.2) ;
 	
-	background-color: #0072bb;
+	background-color: #6b8315;
 	background-image: -moz-linear-gradient(top, #6b8315, #435500);
 	background-image: -ms-linear-gradient(top, #6b8315, #435500);
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#6b8315), to(#435500));
