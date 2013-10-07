@@ -3,6 +3,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="Description" content="Educational Non-Profit dedicated to providing a safe place for people to play video games" />
+		<meta name="Keywords" content="Video Games, Gaming Community, Video Game Community, PC Games, Xbox Games, Playstation, Xbox" />
 		<title>Seductive Turtle Gaming Community</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="/assets/css/bootstrap.css" type="text/css">
@@ -43,9 +45,10 @@
 			<nav class="navbar">
 				<div class="navbar-inner">
 					<div class="container">
-						<a href="/"><img src="/assets/img/logo.png" id="logo" /></a>
+						<a href="/"><img src="http://www.seductiveturtle.com/img/logos/dark/BIG/v2-shadow.png" id="logo" /></a>
 						<ul class="nav">
 							<li class="active"><a href="#">Home</a></li>
+							<li><a href="http://forum.st-gc.org/">Forum</a></li>
 							<li><a href="ts3server://ts.st-gc.org/?port=9987">Teamspeak</a></li>
 						</ul>
 					</div>
@@ -59,9 +62,11 @@
 			<hr class="shadow-line" />		 
 			<nav class="links">			 
 				<a href="/">Home</a>
+				<a href="http://forum.st-gc.org/">Forum</a>
 				<a href="ts3server://ts.st-gc.org/?port=9987">Teamspeak</a>
-				<a href="http://bf3-top100.com/"><img src="http://bf3-top100.com/button.php?u=aequasi" alt="Battlefield 3 Top100" border="0" /></a>
-			</nav>  
+				<!--a href="http://bf3-top100.com/"><img src="http://bf3-top100.com/button.php?u=aequasi" alt="Battlefield 3 Top100" border="0" /></a-->
+			</nav>
+			<div class="fb-like" data-href="https://www.facebook.com/stgamingcommunity" data-width="450" data-colorscheme="dark" data-show-faces="true" data-send="true"></div>
 		</footer>
 		<script src="/assets/js/bootstrap.js"></script>
 		<script src="/assets/js/underscore.js"></script>
@@ -77,6 +82,24 @@
 				var s = document.getElementsByTagName('script')[0];
 				s.parentNode.insertBefore(t, s);
 			})();
+		</script>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=577416412294512";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-44598762-1', 'st-gc.org');
+		ga('send', 'pageview');
+
 		</script>
 	</body>
 </html>
