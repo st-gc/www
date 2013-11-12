@@ -39,17 +39,27 @@
 		</script>
 		<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/offsite_event.php?id=6008839602669&amp;value=0&amp;currency=USD" /></noscript>
 		{% block javascripts %}{% endblock %}
+		{% block stylesheets %}{% endblock %}
 	</head>
 	<body>
 		<section class="container">
 			<nav class="navbar">
 				<div class="navbar-inner">
 					<div class="container">
-						<a href="/"><img src="http://www.seductiveturtle.com/img/logos/dark/BIG/v2-shadow.png" id="logo" /></a>
+						<a href="/"><img src="/seductiveturtle.png" id="logo" /></a>
 						<ul class="nav">
-							<li class="active"><a href="#">Home</a></li>
 							<li><a href="http://forum.st-gc.org/">Forum</a></li>
 							<li><a href="ts3server://ts.st-gc.org/?port=9987">Teamspeak</a></li>
+							<li><a href="/membership">Formal Membership</a></li>
+							<li><a href="/register">Register</a></li>
+							<li>
+								<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+									<input type="hidden" name="cmd" value="_s-xclick">
+									<input type="hidden" name="hosted_button_id" value="JTY4PNMAN63LC">
+									<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+									<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+								</form>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -61,10 +71,18 @@
 		<footer class="container footer-box">   
 			<hr class="shadow-line" />		 
 			<nav class="links">			 
-				<a href="/">Home</a>
 				<a href="http://forum.st-gc.org/">Forum</a>
 				<a href="ts3server://ts.st-gc.org/?port=9987">Teamspeak</a>
 				<!--a href="http://bf3-top100.com/"><img src="http://bf3-top100.com/button.php?u=aequasi" alt="Battlefield 3 Top100" border="0" /></a-->
+				<a href="/membership">Formal Membership</a>
+				<a href="/Register">Register</a>
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="JTY4PNMAN63LC">
+					<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+				</form>
+
 			</nav>
 			<div class="fb-like" data-href="https://www.facebook.com/stgamingcommunity" data-width="450" data-colorscheme="dark" data-show-faces="true" data-send="true"></div>
 		</footer>
@@ -101,5 +119,22 @@
 		ga('send', 'pageview');
 
 		</script>
+		<!-- Piwik -->
+		<script type="text/javascript">
+		  var _paq = _paq || [];
+		  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+		  _paq.push(["setCookieDomain", "*.st-gc.org"]);
+		  _paq.push(["trackPageView"]);
+		  _paq.push(["enableLinkTracking"]);
+
+		  (function() {
+		    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://reporting.lfgame.rs/";
+		    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+		    _paq.push(["setSiteId", "2"]);
+		    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+		    g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+		  })();
+		</script>
+		<!-- End Piwik Code -->
 	</body>
 </html>

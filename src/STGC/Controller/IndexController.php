@@ -13,6 +13,13 @@ class IndexController implements ControllerInterface
 	{
 		$app->get( '/', "controller.index:indexAction" );
 		$app->get( '/rules', "controller.index:rulesAction" );
+		$app->get( '/membership', "controller.index:membershipAction" );
+		$app->get( '/thank-you', "controller.index:thankyouAction" );
+		$app->get( '/register',
+			function() use( $app ) {
+				return $app->redirect( 'http://forum.st-gc.org/ucp.php?mode=register' );
+			}
+		);
 	}
 
 	public function indexAction( )
@@ -23,5 +30,15 @@ class IndexController implements ControllerInterface
 	public function rulesAction( )
 	{
 		return $this->getApp()->render( 'Index/rules.html.twig' );
+	}
+	
+	public function membershipAction()
+	{
+		return $this->getApp()->render( 'Index/membership.html.twig' );
+	}
+	
+	public function thankyouAction()
+	{
+		return $this->getApp()->render( 'Index/thankyou.html.twig' );
 	}
 }
