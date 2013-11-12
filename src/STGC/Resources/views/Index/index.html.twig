@@ -1,0 +1,53 @@
+{% extends 'Layout/main.html.twig' %}
+
+{% block javascripts %}
+<script type="text/javascript">
+$( function() {
+//	$( document ).on( 'click', '#join-teamspeak', teamspeak );
+} );
+function teamspeak( event ) {
+
+	var url = $( this ).attr( 'href' ),
+	    w   = window.open( url, '_blank', 'status=0,toolbar=0,menubar=0,height=0,width=0,top=-10,left=-10' );
+	if(w !== null) {	
+		w.close();
+		if ( confirm( 'You either need Teamspeak, or your OS doesn't like this link. Would you like to download it?' ) ) {
+			window.location.href = 'http://teamspeak.com/?page=downloads';
+		} else {
+			alert( "If you know you already have teamspeak, then connect to ts.st-gc.org on port 9987" );
+		}
+	} else {
+		w.close();
+	}
+
+	return false;
+}
+</script>
+{% endblock %}
+
+{% block content %}
+	<section class="section-box shadow">
+	<section class="container">
+		<div class="row">
+			<header class="highlight span12">
+				<h2>Welcome to the Seductive Turtle Gaming Community</h2>			   
+			</header>		
+			<header class="highlight span12">
+				<p>
+					Unlike most gaming communities, we mostly hang out in our teamspeak server. Teamspeak is a voice chat client, like Ventrillo, or Mumble, but a little bit more powerful. There is a link to their website below, with a download after the link. You are welcome to join us, even if you don't have a microphone, or if you dont want to talk!</p>
+				<p>
+					<a href="http://www.teamspeak.com/" class="big-btn">Visit TeamSpeak.com</a>
+					<a id="join-teamspeak" href="ts3server://ts.st-gc.org/?port=9987" class="big-btn">Join the TeamSpeak</a>
+				</p>
+				<p>
+					If that link doesnt work, connect to "ts.st-gc.org" in your teamspeak client.<br />
+					We also have a forum running. Check it out by clicking the link below.
+				</p>
+				<p>
+					<a href="http://forum.st-gc.org/" class="big-btn">Commmunity Forum</a>
+				</p>
+			</header>		
+		</div>   
+	</section>
+	</section>
+{% endblock %}

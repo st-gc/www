@@ -1,0 +1,38 @@
+{% extends 'Layout/main.html.twig' %}
+
+{% block javascripts %}
+<script type="text/javascript">
+	var rules = [
+		{ title: "Don't be a Dick", msg: "We want to be a fun group of people to play with, and not a group of people that just insults eachother. Keep this in mind while you are in the teamspeak." },
+		{ title: "Spread the word", msg: "We want everyone to have a chance to play games with us. If you've got friends that you play games with, that might be interested, get them involved!" },
+		{ title: "No Racism and no Politics (Zero Tolerance)", msg: "This one is pretty self explanitory. If you want to participate in either of these, do it privately." },
+		{ title: "Be helpful", msg: "We want this group to be a very inviting group, so when you see new people around, help them out, be nice to them. If there are issues, talk to a moderator." },
+		{ title: "Have fun", msg: "Last but not least, we want everyone here to have fun, no exceptions!" }
+	];
+	
+	$( function() { 
+		var template = $( '#rule-template' ).html();
+		_.each( rules, function( rule ) { 
+			$( '.rules' ).append( _.template( template, { rule: rule } ) );
+		} );
+	} );
+</script>
+{% endblock %}
+
+{% block content %}
+	<section class="container">
+		<h2>RULES!</h2>
+	</section>
+	<section class="section-box shadow rules">
+	</section>
+	<script type="text/template" id="rule-template">
+		<div class="rule">
+			<div class="rule-label">
+				<%=rule.title%>
+			</div>
+			<div class="rule-desc">
+				<%=rule.msg%>
+			</div>
+		</div>
+	</script>
+{% endblock %}
