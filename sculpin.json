@@ -1,0 +1,13 @@
+{
+    "name": "st-gc/www",
+    "description": "Website for ST-GC",
+    "type": "sculpin-site",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aaron Scherer",
+            "email": "aequasi@gmail.com",
+            "homepage": "http://aaronscherer.me"
+        }
+    ]
+}
